@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10152b">
+  <title>BrainZone — Mantiqiy o‘yinlar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient a1"></div><div class="ambient a2"></div>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">✦</span> Brain<span>Zone</span></a>
+    <div class="top-right"><span class="online-dot"></span><span id="headerUser">Mehmon rejimi</span><button class="ghost-btn" id="changeUser">Profilni almashtirish</button></div>
+  </header>
+
+  <main>
+    <section class="welcome" id="welcome">
+      <div class="welcome-copy">
+        <div class="eyebrow">🧠 FIKRLASHNI KUCHAYTIR</div>
+        <h1>Har bir jumboq —<br><span>yangi imkoniyat.</span></h1>
+        <p>Yoshingizga mos mantiqiy o‘yinlarni tanlang, ball to‘plang va o‘z rekordingizni yangilang.</p>
+        <div class="login-card">
+          <label for="username">O‘yinchi nomi</label>
+          <div class="login-row"><input id="username" maxlength="18" placeholder="Ismingizni kiriting..." autocomplete="nickname"><button id="startBtn" class="primary-btn">Boshlash <span>→</span></button></div>
+          <small>Profilingiz ushbu brauzerda saqlanadi.</small>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true"><div class="orbit orbit1"></div><div class="orbit orbit2"></div><div class="brain">🧠</div><div class="float f1">＋</div><div class="float f2">?</div><div class="float f3">✦</div><div class="float f4">▦</div></div>
+    </section>
+
+    <section id="dashboard" class="hidden">
+      <div class="dash-head">
+        <div><div class="eyebrow">XUSH KELIBSIZ, <span id="playerName">O‘YINCHI</span> 👋</div><h2>Bugun miyangizni <span>charxlang.</span></h2><p class="muted">O‘zingizga mos darajani tanlang va o‘ynashni boshlang.</p></div>
+        <div class="stats"><div class="stat"><strong id="totalScore">0</strong><span>Jami ball</span></div><div class="stat"><strong id="playedCount">0</strong><span>O‘yinlar</span></div><div class="stat"><strong>30</strong><span>Jumboq</span></div></div>
+      </div>
+      <div class="toolbar"><div class="search-wrap">⌕ <input id="search" placeholder="O‘yin qidirish..."></div><div class="filters" id="filters"><button class="filter active" data-age="all">Barchasi</button><button class="filter" data-age="5-8">5–8 yosh</button><button class="filter" data-age="10-18">10–18 yosh</button><button class="filter" data-age="18-20">18–20 yosh</button></div></div>
+      <div id="gameSections"></div>
+    </section>
+
+    <section id="playArea" class="hidden">
+      <button class="back-btn" id="backBtn">← O‘yinlar ro‘yxatiga</button>
+      <div class="game-shell">
+        <div class="game-top"><div><div class="eyebrow" id="gameAge">MANTIQIY O‘YIN</div><h2 id="gameTitle">Jumboq</h2><p class="muted" id="gameDesc"></p></div><div class="game-progress"><span id="roundLabel">1 / 1</span><div class="progress"><i id="progressBar"></i></div></div></div>
+        <div id="questionBox" class="question-box"></div>
+        <div id="answerArea" class="answer-area"></div>
+        <div class="game-actions"><span id="feedback" aria-live="polite">Javobingizni tanlang.</span><button id="nextBtn" class="primary-btn" disabled>Tekshirish <span>→</span></button></div>
+      </div>
+    </section>
+    <footer>BrainZone <span>•</span> O‘yla, izla, top! <span class="footer-right">HTML · CSS · JavaScript</span></footer>
+  </main>
+  <div id="toast" class="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
